@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+$mainCol: #1d9db3;
+.active {
+  text-transform: capitalize;
+  font-size: 18px;
+  text-decoration: line-through;
+  transition: all 0.4s ease-in-out;
+}
+
+.navbar {
+  .container {
+    .navbar-brand {
+      font-family: "Lobster", cursive;
+      color: $mainCol;
+    }
+    button {
+      span {
+      }
+    }
+    .collapse {
+    }
+    ul {
+      li {
+        a {
+        }
+      }
+    }
+    .link {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      a {
+      }
+      button {
+      }
+    }
+  }
+}

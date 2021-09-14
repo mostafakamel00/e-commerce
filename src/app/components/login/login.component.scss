@@ -1,0 +1,49 @@
+$mainCol: #17a2b8;
+.body {
+  background: #343a40;
+  height: 100vh;
+  .form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    h2 {
+      margin-top: 5rem;
+      font-weight: 900;
+      letter-spacing: 60px;
+      opacity: 0.2;
+      font-family: "Lobster", cursive;
+    }
+    input {
+      color: $mainCol;
+
+      padding: 22px 10px;
+
+      &::placeholder {
+        color: $mainCol;
+        opacity: 0.5;
+      }
+    }
+    .btn {
+      width: 100%;
+      button {
+        width: 35%;
+      }
+    }
+  }
+}
+/* Small */
+@media (min-width: 768px) {
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}

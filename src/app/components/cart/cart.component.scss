@@ -1,0 +1,24 @@
+.container {
+  table {
+    margin-top: 9rem !important;
+    thead {
+    }
+    tbody {
+      tr {
+        th {
+        }
+        td {
+          input {
+            background: #343a40;
+            border: none;
+            outline: none;
+            color: #0ff;
+            &::placeholder {
+              color: #0ff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<div class="body" id="signIn">
+  <form #f='ngForm' class="form" (ngSubmit)="signIn(f)">
+    <h2 class="text-center text-info">
+      {{"signIn" | titlecase}}
+    </h2>
+    <!--start input email-->
+    <input ngModel name='email' #email='ngModel' type="email" class='form-control w-100' placeholder="Email" required email>
+    <div class="alert alert-danger" *ngIf='email.touched && email.errors?.required'>
+      {{"email is required" | titlecase}}
+    </div>
+    <div class="alert alert-danger" *ngIf='email.touched && email.errors?.email'>
+      {{"email is not email" | titlecase}}
+    </div>
+
+    <!--end input email-->
+    <!--start input password-->
+    <input ngModel name='password' #password='ngModel' type="password" class='form-control my-3' placeholder="Password" required minlength="6">
+    <div class="alert alert-danger" *ngIf='password.touched && password.errors?.required'>
+      {{"password is required" | titlecase}}
+    </div>
+    <div class="alert alert-danger" *ngIf='password.touched && password.errors?.minlength'>
+      {{"you need to make a password more than 6 character" | titlecase}}
+    </div>
+    <!--end input password-->
+    <div class="btn">
+      <button [disabled]='f.invalid' class="btn btn-info">{{"logIn" | titlecase}}</button>
+    </div>
+    <div class="alert alert-danger text-center text-info" *ngIf="errorMsg">
+      {{"your password or email is not correct" | titlecase}}
+    </div>
+  </form>
+</div>
