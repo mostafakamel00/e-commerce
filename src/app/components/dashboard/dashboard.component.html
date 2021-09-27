@@ -1,14 +1,45 @@
 <div class="body my-5">
   <div class="container my-5">
-    <h2 class='text-center my-5'>{{"add new good" | titlecase}}</h2>
-    <form #f="ngForm" (ngSubmit)="addNewGood(f)">
-      <input type="text" name="name" ngModel placeholder="name" class="form-control" required>
-      <input type="number" name="price" ngModel placeholder="price" class="form-control my-2" required>
-      <input type="file" name="image" ngModel required #image>
+    <h2
+      class="text-center my-5"
+      data-aos="fade-down-right"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+    >
+      {{ "add new good" | titlecase }}
+    </h2>
+    <form
+      #f="ngForm"
+      (ngSubmit)="addNewGood(f)"
+      data-aos="flip-down"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+    >
+      <input
+        type="text"
+        name="name"
+        ngModel
+        placeholder="name"
+        class="form-control"
+        required
+      />
+      <input
+        type="number"
+        name="price"
+        ngModel
+        placeholder="price"
+        class="form-control my-2"
+        required
+      />
+      <input type="file" name="image" ngModel required #image />
       <div class="btn-add">
-        <input type="submit" class="btn btn-primary my-2 " value="add" [disabled]="f.invalid">
+        <input
+          type="submit"
+          class="btn btn-primary my-2"
+          value="add"
+          [disabled]="f.invalid"
+        />
       </div>
     </form>
   </div>
-
 </div>

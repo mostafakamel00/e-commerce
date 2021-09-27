@@ -5,7 +5,7 @@ import { routingAni } from './animations/routing';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations: [routingAni],
+  // animations: [routingAni],
 })
 export class AppComponent {
   outlet: any;
